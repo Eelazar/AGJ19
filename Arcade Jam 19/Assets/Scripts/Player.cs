@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private GameObject arm;
+    public GameObject player;
+    public GameObject tool;
+    public GameObject anchor;
 
     public Vector3 com;
 
@@ -17,9 +19,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        arm = transform.GetChild(0).gameObject;
-
-        GetComponent<Rigidbody2D>().centerOfMass = com;
+        player.GetComponent<Rigidbody2D>().centerOfMass = com;
     }
 
 
@@ -39,45 +39,74 @@ public class Player : MonoBehaviour
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            moveLock = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    moveLock = true;
+        //}
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            moveLock = false;
+            moveLock = !moveLock;
         }
     }
-
     void Rotate()
     {
         if (!moveLock)
         {
-            Vector3 pos = transform.position;
+            Vector3 pos = tool.transform.position;
             pos.x += input.x;
             pos.y += input.y;
             pos.z = 0;
 
-            Vector3 dir = pos - transform.position;
+            Vector3 dir = pos - tool.transform.position;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-            arm.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            tool.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-        else
+        else if(moveLock)
         {
-            arm.transform.GetChild(0).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+            anchor.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
 
-            Vector3 pos = transform.position;
+            Vector3 pos = anchor.transform.position;
             pos.x += input.x;
             pos.y += input.y;
             pos.z = 0;
 
-            Vector3 dir = pos - transform.position;
+            Vector3 dir = pos - anchor.transform.position;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-            transform.RotateAround(arm.transform.GetChild(0).position, Vector3.forward, angle);
+            anchor.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
+
+    //void Rotate()
+    //{
+    //    if (!moveLock)
+    //    {
+    //        Vector3 pos = transform.position;
+    //        pos.x += input.x;
+    //        pos.y += input.y;
+    //        pos.z = 0;
+
+    //        Vector3 dir = pos - transform.position;
+    //        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+    //        arm.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    //    }
+    //    else
+    //    {
+    //        transform.parent.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+
+    //        Vector3 pos = transform.parent.transform.position;
+    //        pos.x += -input.x;
+    //        pos.y += -input.y;
+    //        pos.z = 0;
+
+    //        Vector3 dir = pos - transform.parent.transform.position;
+    //        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+    //        transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    //    }
+    //}
 
     private void OnDrawGizmos()
     {
