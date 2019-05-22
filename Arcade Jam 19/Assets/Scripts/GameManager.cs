@@ -28,10 +28,10 @@ public class GameManager : MonoBehaviour
 
         foreach(GameObject p in players)
         {
-            if(p.alive == true)
-            {
-                alive++;
-            }
+            //if(p.alive == true)
+            //{
+            //    alive++;
+            //}
         }
 
         if(alive < 2)
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject p = GameObject.Instantiate<GameObject>(playerPrefab, spawnPositions[0].position, playerPrefab.transform.rotation);
 
-            p.playerID = 1;
+            //p.playerID = 1;
 
             players.Add(p);
         }
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject p = GameObject.Instantiate<GameObject>(playerPrefab, spawnPositions[1].position, playerPrefab.transform.rotation);
 
-            p.playerID = 2;
+            //p.playerID = 2;
 
             players.Add(p);
         }
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject p = GameObject.Instantiate<GameObject>(playerPrefab, spawnPositions[2].position, playerPrefab.transform.rotation);
 
-            p.playerID = 3;
+            //p.playerID = 3;
 
             players.Add(p);
         }
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject p = GameObject.Instantiate<GameObject>(playerPrefab, spawnPositions[3].position, playerPrefab.transform.rotation);
 
-            p.playerID = 4;
+            //p.playerID = 4;
 
             players.Add(p);
         }
