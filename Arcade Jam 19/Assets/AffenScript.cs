@@ -5,6 +5,7 @@ using UnityEngine;
 public class AffenScript : MonoBehaviour {
     private Rigidbody2D rb;
     public float Jumpvalue;
+    public GameObject Fixpoints;
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -16,8 +17,17 @@ public class AffenScript : MonoBehaviour {
 	}
     private void Jump()
     {
-        Debug.Log("whadh");
+
         rb.AddForce(Vector2.up*Jumpvalue);
     }
-
+    private void OnDestroy()
+    {
+        Destroy(Fixpoints);
+        GameObject[] goa=GetComponentsInChildren<GameObject>();
+        for(int i = 0; i<goa.Length; i++)
+        {
+            Destroy(goa[i]);
+        }
+        Destroy(GetComponentInParent<GameObject>());
+    }
 }

@@ -41,6 +41,7 @@ public class ArmdrehScript : MonoBehaviour {
 
         if (tag == "p1")
         {
+           
             if (Input.GetKeyDown(KeyCode.Period))
             {
                 AffeMitWaffe.SendMessage("Jump");
@@ -358,6 +359,45 @@ public class ArmdrehScript : MonoBehaviour {
                 }
                 else rb.AddTorque(-torguevalue);
             }
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (tag == "p1")
+        {
+            if (tag == "Player")
+            {
+                Debug.Log("Geilon");
+                return;
+            }
+            if(collision.transform.tag == "Affe2" || collision.transform.tag == "Affe3" || collision.transform.tag == "Affe4")
+            {
+                
+                Destroy(collision.gameObject);
+            }
+        }
+        if (tag == "p2")
+        {
+            if (collision.transform.tag == "Affe1" || collision.transform.tag == "Affe3" || collision.transform.tag == "Affe4")
+            {
+                Destroy(collision.gameObject);
+            }
+
+        }
+        if (tag == "p3")
+        {
+            if (collision.transform.tag == "Affe1" || collision.transform.tag == "Affe2" || collision.transform.tag == "Affe4")
+            {
+                Destroy(collision.gameObject);
+            }
+        }
+        if (tag == "p4")
+        {
+            if (collision.transform.tag == "Affe1" || collision.transform.tag == "Affe2" || collision.transform.tag == "Affe3")
+            {
+                Destroy(collision.gameObject);
+            }
+
         }
     }
     
