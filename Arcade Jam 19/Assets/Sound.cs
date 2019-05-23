@@ -12,16 +12,16 @@ public class Sound : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("collided");
-        foreach (ContactPoint contact in collision.contacts)
+        foreach (ContactPoint2D contact in collision.contacts)
         {
             Debug.DrawRay(contact.point, contact.normal, Color.white);
-            Debug.Log("collided with this point");
+          
         }
         Debug.Log(collision.relativeVelocity.magnitude);
-        if (collision.relativeVelocity.magnitude > 2)
+        if (collision.relativeVelocity.magnitude > 18)
         {
             FMODUnity.RuntimeManager.PlayOneShot(LadleHit);
         }
