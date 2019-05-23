@@ -12,8 +12,17 @@ public class ArmdrehScript : MonoBehaviour {
     public float impactAmount;
     public Transform Impactpoint;
     public GameObject AffeMitWaffe;
-	// Use this for initialization
-	void Start () {
+    public Transform Rechenpunkt;
+    public Transform ObenLinks;
+    public Transform Oben;
+    public Transform ObenRechts;
+    public Transform Rechts;
+    public Transform UntenRechts;
+    public Transform Unten;
+    public Transform UntenLinks;
+    public Transform Links;
+    // Use this for initialization
+    void Start () {
         rb = GetComponent<Rigidbody2D>();
         hj = GetComponent<HingeJoint2D>();
 	}
@@ -22,7 +31,6 @@ public class ArmdrehScript : MonoBehaviour {
 	void Update () {
         if (rb.velocity.magnitude >= maxtorgue)
         {
-            Debug.Log(rb.velocity);
             rb.velocity = rb.velocity.normalized * maxtorgue;
 
         }
@@ -33,131 +41,77 @@ public class ArmdrehScript : MonoBehaviour {
         
         if (Input.GetKeyDown("i"))
         {
-            rb.AddForceAtPosition(new Vector2(-transform.localPosition.x * impactAmount,- transform.localPosition.y * impactAmount), new Vector2(Impactpoint.position.x, Impactpoint.position.y));
+            rb.AddForceAtPosition(new Vector2(Impactpoint.position.x - transform.position.x, Impactpoint.position.y - transform.position.x).normalized * impactAmount, new Vector2(Impactpoint.position.x,Impactpoint.position.y));
             
         }
         
 
         if (Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("d"))
         {
-            float f = kuerzen();
-            if (f>=270f || f <= 90)
+            if ((Rechts.position - Rechenpunkt.position).magnitude >= (Links.position - Rechenpunkt.position).magnitude)
             {
-                rb.AddTorque(torguevalue * boostlocal);
-
+                rb.AddTorque(-torguevalue);
             }
-            if (f >= 90f && f <= 270f)
-            {
-                rb.AddTorque(-torguevalue * boostlocal);
-
-            }
-
+            else rb.AddTorque(torguevalue);
         }
         if (Input.GetKey("a") && !Input.GetKey("w") && !Input.GetKey("s"))
         {
-            float f = kuerzen();
-            if (f <= 180)
+            if ((Oben.position - Rechenpunkt.position).magnitude >= (Unten.position - Rechenpunkt.position).magnitude)
             {
-                rb.AddTorque(torguevalue * boostlocal);
-
+                rb.AddTorque(-torguevalue);
             }
-            if ( f>= 180 )
-            {
-                rb.AddTorque(-torguevalue * boostlocal);
-
-            }
+            else rb.AddTorque(torguevalue);
         }
         if (Input.GetKey("s") && !Input.GetKey("a") && !Input.GetKey("d"))
         {
-            float f = kuerzen();
-            if (f >= 270f || f <= 90)
-            {
-                rb.AddTorque(-torguevalue * boostlocal);
-
+            if ((Rechts.position - Rechenpunkt.position).magnitude >= (Links.position - Rechenpunkt.position).magnitude)
+                {
+                    rb.AddTorque(torguevalue);
+                }
+                else rb.AddTorque(-torguevalue);
+                
             }
-            if (f >= 90f && f <= 270f)
-            {
-                rb.AddTorque(torguevalue * boostlocal);
-
-            }
-
-        }
         if (Input.GetKey("d") && !Input.GetKey("w") && !Input.GetKey("s"))
         {
-            float f = kuerzen();
-            if (f <= 180)
+            if ((Oben.position - Rechenpunkt.position).magnitude >= (Unten.position - Rechenpunkt.position).magnitude)
             {
-                rb.AddTorque(-torguevalue * boostlocal);
-
+                rb.AddTorque(torguevalue);
             }
-            if (f >= 180)
-            {
-                rb.AddTorque(torguevalue * boostlocal);
-
-            }
+            else rb.AddTorque(-torguevalue);
         }
         if (Input.GetKey("w") && Input.GetKey("d"))
         {
-            float f = kuerzen();
-            if (f >= 45f && f <= 225f)
+            if ((ObenLinks.position - Rechenpunkt.position).magnitude >= (UntenRechts.position - Rechenpunkt.position).magnitude)
             {
-                rb.AddTorque(-torguevalue * boostlocal);
-
+                rb.AddTorque(torguevalue);
             }
-            if (f <= 45f || f >= 225f)
-            {
-                rb.AddTorque(torguevalue * boostlocal);
-
-            }
+            else rb.AddTorque(-torguevalue);
         }
         if (Input.GetKey("w") && Input.GetKey("a"))
         {
-            float f = kuerzen();
-            if (f >= 135f && f <= 315f)
+            if ((ObenRechts.position - Rechenpunkt.position).magnitude >= (UntenLinks.position - Rechenpunkt.position).magnitude)
             {
-                rb.AddTorque(-torguevalue * boostlocal);
-
+                rb.AddTorque(torguevalue);
             }
-            if (f <= 135f || f >= 315f)
-            {
-                rb.AddTorque(torguevalue * boostlocal);
-
-            }
+            else rb.AddTorque(-torguevalue);
         }
         if (Input.GetKey("a") && Input.GetKey("s"))
         {
-            float f = kuerzen();
-            if (f <= 225f && f>=45f)
+            if ((ObenLinks.position - Rechenpunkt.position).magnitude >= (UntenRechts.position - Rechenpunkt.position).magnitude)
             {
-                rb.AddTorque(torguevalue * boostlocal);
-
+                rb.AddTorque(-torguevalue);
             }
-            if (f >= 225 || f <= 45)
-            {
-                rb.AddTorque(-torguevalue * boostlocal);
-
-            }
+            else rb.AddTorque(torguevalue);
         }
         if (Input.GetKey("s") && Input.GetKey("d"))
         {
-            float f = kuerzen();
-            if (f <= 135f || f >= 315f)
+            if ((ObenRechts.position - Rechenpunkt.position).magnitude >= (UntenLinks.position - Rechenpunkt.position).magnitude)
             {
-                rb.AddTorque(-torguevalue * boostlocal);
-
+                rb.AddTorque(-torguevalue);
             }
-            else 
-              rb.AddTorque(torguevalue * boostlocal);
-
-            
+            else rb.AddTorque(torguevalue);
         }
 
     }
-    float kuerzen()
-    {
-        float f = transform.rotation.eulerAngles.z;
-        if (f < 0) f *= -1;
-        while (f > 360) f -= 360;
-        return f;
-    }
+    
 }

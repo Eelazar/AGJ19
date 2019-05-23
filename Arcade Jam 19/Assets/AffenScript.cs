@@ -17,7 +17,7 @@ public class AffenScript : MonoBehaviour {
     private void Jump()
     {
         Debug.Log("whadh");
-        rb.AddForce(new Vector2(0f, Jumpvalue));
+        rb.AddForce(Vector2.up*Jumpvalue);
     }
 
 }
