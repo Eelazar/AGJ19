@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{f0127b42-2a2b-48f1-b375-fc600cca09d7}">
+        <property name="assetPath">
+            <value>Metal Hardfist.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.57551020408163267</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{36d9186c-c766-46e9-a8ea-6a33dc92e877}</destination>
+        </relationship>
+    </object>
+</objects>

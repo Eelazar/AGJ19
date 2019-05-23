@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{9ea98815-63ec-4c23-a0e2-e4ac413f2451}">
+        <property name="assetPath">
+            <value>Metallic DropTwo.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.30056689342403631</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{36d9186c-c766-46e9-a8ea-6a33dc92e877}</destination>
+        </relationship>
+    </object>
+</objects>
