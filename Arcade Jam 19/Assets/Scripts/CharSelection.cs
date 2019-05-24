@@ -50,7 +50,7 @@ public class CharSelection : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.G) && Static.player1 == false)
+        if (Input.GetKeyDown(KeyCode.Period) && Static.player1 == false)
         {
             hintFields[0].SetActive(false);
             playerFields[0].SetActive(true);
@@ -58,7 +58,7 @@ public class CharSelection : MonoBehaviour
             Static.player1 = true;
             index += 1;
         }
-        else if (Input.GetKeyDown(KeyCode.G) && Static.player1 == true)
+        else if (Input.GetKeyDown(KeyCode.Period) && Static.player1 == true)
         {
             hintFields[0].SetActive(true);
             playerFields[0].SetActive(false);
@@ -67,7 +67,7 @@ public class CharSelection : MonoBehaviour
             index -= 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && Static.player2 == false)
+        if (Input.GetKeyDown(KeyCode.BackQuote) && Static.player2 == false)
         {
             hintFields[1].SetActive(false);
             playerFields[1].SetActive(true);
@@ -75,7 +75,7 @@ public class CharSelection : MonoBehaviour
             Static.player2 = true;
             index += 1;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha1) && Static.player2 == true)
+        else if (Input.GetKeyDown(KeyCode.BackQuote) && Static.player2 == true)
         {
             hintFields[1].SetActive(true);
             playerFields[1].SetActive(false);
@@ -84,7 +84,7 @@ public class CharSelection : MonoBehaviour
             index -= 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.C) && Static.player3 == false)
+        if (Input.GetKeyDown(KeyCode.G) && Static.player3 == false)
         {
             hintFields[2].SetActive(false);
             playerFields[2].SetActive(true);
@@ -92,7 +92,7 @@ public class CharSelection : MonoBehaviour
             Static.player3 = true;
             index += 1;
         }
-        else if (Input.GetKeyDown(KeyCode.C) && Static.player3 == true)
+        else if (Input.GetKeyDown(KeyCode.G) && Static.player3 == true)
         {
             hintFields[2].SetActive(true);
             playerFields[2].SetActive(false);

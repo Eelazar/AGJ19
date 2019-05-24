@@ -291,9 +291,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefabs:
-  - {fileID: 1594144204304790673, guid: 6f480baa86c05ba4ca46d7daf8d70d14, type: 3}
-  - {fileID: 6089710150613611207, guid: 5bcca4745f9cb48499337fa8e9a92826, type: 3}
   - {fileID: 8251396310880887143, guid: 7de1c61004a04be4699ea0d231b48a3c, type: 3}
+  - {fileID: 6089710150613611207, guid: 5bcca4745f9cb48499337fa8e9a92826, type: 3}
+  - {fileID: 1594144204304790673, guid: 6f480baa86c05ba4ca46d7daf8d70d14, type: 3}
   - {fileID: 8923947331856917522, guid: a9ae099fadeb79949b30247245886146, type: 3}
   spawnPositions:
   - {fileID: 1956533176}
@@ -927,7 +927,7 @@ Tilemap:
   - first: {x: 9, y: -3, z: 0}
     second:
       m_TileIndex: 16
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 12
       m_ObjectToInstantiate: {fileID: 0}
@@ -1173,9 +1173,8 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 8106820057268062610, guid: 762598f6ba4e4c34da4b808265d0237f,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -8082544060019124042, guid: 762598f6ba4e4c34da4b808265d0237f,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 26
     m_Data: {fileID: -9114637066075335717, guid: 762598f6ba4e4c34da4b808265d0237f,
       type: 3}
@@ -1184,8 +1183,9 @@ Tilemap:
       type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -8082544060019124042, guid: 762598f6ba4e4c34da4b808265d0237f,
+      type: 3}
   - m_RefCount: 9
     m_Data: {fileID: -2664494659998038578, guid: 762598f6ba4e4c34da4b808265d0237f,
       type: 3}
@@ -1476,7 +1476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664073362
 GameObject:
