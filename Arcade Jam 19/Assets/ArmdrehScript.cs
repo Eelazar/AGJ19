@@ -367,13 +367,43 @@ public class ArmdrehScript : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if (collision.transform.tag == "Affe2" || collision.transform.tag == "Affe3" || collision.transform.tag == "Affe4" || collision.transform.tag == "Affe1")
-        {
+        //if (collision.transform.tag == "Affe2" || collision.transform.tag == "Affe3" || collision.transform.tag == "Affe4" || collision.transform.tag == "Affe1")
+        //{
             
-            if (collision.relativeVelocity.magnitude > mincol)
-            {
-                Destroy(collision.gameObject);
-            }
+        //    if (collision.relativeVelocity.magnitude > mincol)
+        //    {
+        //        Destroy(collision.gameObject);
+        //    }
+        //}
+
+        switch (collision.transform.tag)
+        {
+            case "Affe1":
+                if (collision.relativeVelocity.magnitude > mincol)
+                {
+                    Destroy(collision.gameObject);
+                }
+                break;
+            case "Affe2":
+                if (collision.relativeVelocity.magnitude > mincol)
+                {
+                    Destroy(collision.gameObject);
+                }
+                break;
+            case "Affe3":
+                if (collision.relativeVelocity.magnitude > mincol)
+                {
+                    Destroy(collision.gameObject);
+                }
+                break;
+            case "Affe4":
+                if (collision.relativeVelocity.magnitude > mincol)
+                {
+                    Destroy(collision.gameObject);
+                }
+                break;
+            default:
+                break;
         }
         /*
         if (tag == "p1")

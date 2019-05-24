@@ -31,11 +31,11 @@ public class Sound : MonoBehaviour
         }
         */
        // Debug.Log("collided");
-        foreach (ContactPoint2D contact in collision.contacts)
-        {
-           // Debug.DrawRay(contact.point, contact.normal, Color.white);
+        //foreach (ContactPoint2D contact in collision.contacts)
+        //{
+        //   // Debug.DrawRay(contact.point, contact.normal, Color.white);
           
-        }
+        //}
        // Debug.Log(collision.relativeVelocity.magnitude);
         if (collision.relativeVelocity.magnitude > 18)
         {

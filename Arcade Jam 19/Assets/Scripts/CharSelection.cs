@@ -41,7 +41,7 @@ public class CharSelection : MonoBehaviour
         {
             Application.Quit();
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Slash) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.H) || Input.GetKeyDown(KeyCode.Keypad2))
         {
             if (index >= 2)
             {

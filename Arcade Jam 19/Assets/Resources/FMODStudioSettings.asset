@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\Lamin\Desktop\AGJ19\MonkeyJam\MonkeyJam.fspro
-  SourceProjectPathUnformatted: C:\Users\Lamin\Desktop\AGJ19\MonkeyJam\MonkeyJam.fspro
-  SourceBankPathUnformatted: C:\Users\Lamin\Desktop\AGJ19\MonkeyJam\Build
+  sourceProjectPath: MonkeyJam\MonkeyJam.fspro
+  SourceProjectPathUnformatted: MonkeyJam\MonkeyJam.fspro
+  SourceBankPathUnformatted: MonkeyJam\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -57,7 +57,6 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBanks:
-  - Master Bank
+  MasterBanks: []
   Banks: []
   LiveUpdatePort: 9264

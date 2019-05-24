@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Card
   Maxtorgue: 10
   torgueValue: 200
-  Impactamount: 50000
+  Impactamount: 5000
