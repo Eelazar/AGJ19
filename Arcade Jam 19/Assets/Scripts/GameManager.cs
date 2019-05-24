@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject[] playerPrefabs;
     public Transform[] spawnPositions;
-
+    public int alive;
     private List<GameObject> players;
 
     void Start()
@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        CheckPlayerStatus();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("CharSelection");
@@ -27,14 +28,14 @@ public class GameManager : MonoBehaviour
 
     void CheckPlayerStatus()
     {
-        int alive = 0;
+         alive = 0;
 
         foreach(GameObject p in players)
         {
-            //if(p.alive == true)
-            //{
-            //    alive++;
-            //}
+            if(p!= null)
+            {
+                alive++;
+            }
         }
 
         if(alive < 2)

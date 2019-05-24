@@ -7,11 +7,12 @@ public class CharSelection : MonoBehaviour
 {
     public GameObject[] playerFields;
     public GameObject[] hintFields;
-
+    private int index;
     public string[] levels;
 
     void Start()
     {
+        index = 0;
         foreach(GameObject go in playerFields)
         {
             go.SetActive(false);
@@ -36,9 +37,17 @@ public class CharSelection : MonoBehaviour
 
     void GetInput()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene(levels[Random.Range(0, levels.Length - 1)]);
+            if (index >= 2)
+            {
+
+                SceneManager.LoadScene(levels[Random.Range(0, levels.Length - 1)]);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.G) && Static.player1 == false)
@@ -47,6 +56,7 @@ public class CharSelection : MonoBehaviour
             playerFields[0].SetActive(true);
 
             Static.player1 = true;
+            index += 1;
         }
         else if (Input.GetKeyDown(KeyCode.G) && Static.player1 == true)
         {
@@ -54,6 +64,7 @@ public class CharSelection : MonoBehaviour
             playerFields[0].SetActive(false);
 
             Static.player1 = false;
+            index -= 1;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1) && Static.player2 == false)
@@ -62,6 +73,7 @@ public class CharSelection : MonoBehaviour
             playerFields[1].SetActive(true);
 
             Static.player2 = true;
+            index += 1;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha1) && Static.player2 == true)
         {
@@ -69,6 +81,7 @@ public class CharSelection : MonoBehaviour
             playerFields[1].SetActive(false);
 
             Static.player2 = false;
+            index -= 1;
         }
 
         if (Input.GetKeyDown(KeyCode.C) && Static.player3 == false)
@@ -77,6 +90,7 @@ public class CharSelection : MonoBehaviour
             playerFields[2].SetActive(true);
 
             Static.player3 = true;
+            index += 1;
         }
         else if (Input.GetKeyDown(KeyCode.C) && Static.player3 == true)
         {
@@ -84,6 +98,7 @@ public class CharSelection : MonoBehaviour
             playerFields[2].SetActive(false);
 
             Static.player3 = false;
+            index -= 1;
         }
 
         if (Input.GetKeyDown(KeyCode.Keypad1) && Static.player4 == false)
@@ -92,6 +107,7 @@ public class CharSelection : MonoBehaviour
             playerFields[3].SetActive(true);
 
             Static.player4 = true;
+            index += 1;
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) && Static.player4 == true)
         {
@@ -99,6 +115,7 @@ public class CharSelection : MonoBehaviour
             playerFields[3].SetActive(false);
 
             Static.player4 = false;
+            index -= 1;
         }
     }
 }

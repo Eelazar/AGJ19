@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6089710150490076240}
   - component: {fileID: 6089710150490076241}
   - component: {fileID: 6089710150490076254}
+  - component: {fileID: 219969529819602586}
   m_Layer: 8
   m_Name: ArmVorne
   m_TagString: p2
@@ -103,6 +104,7 @@ MonoBehaviour:
   maxtorgue: 10
   torguevalue: 2000
   boostAmount: 2
+  mincol: 0
   impactAmount: 50000
   Impactpoint: {fileID: 6089710151100596788}
   AffeMitWaffe: {fileID: 6089710151002660216}
@@ -449,6 +451,21 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &219969529819602586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6089710150490076252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfb253ff2d9aeb43828bcceb9a39b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LadleHit: event:/Ladle
+  Monkey: 
+  minForce: 0
 --- !u!1 &6089710150562399196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,8 +1072,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04c9ce444b975f4f85fb9e9caf3b1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jumpvalue: 100000
-  Fixpoints: {fileID: 0}
+  Jumpvalue: 5000
+  Fixpoints: {fileID: 6089710150817076397}
+  gm: {fileID: 0}
 --- !u!1 &6089710151013650129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,7 +1301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6089710152204265003
 Transform:
   m_ObjectHideFlags: 0

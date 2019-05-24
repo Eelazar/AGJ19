@@ -10,6 +10,7 @@ public class ArmdrehScript : MonoBehaviour {
     public float torguevalue;
     public float boostAmount;
     private float boostlocal=1;
+    public float mincol;
     public float impactAmount;
     public Transform Impactpoint;
     public GameObject AffeMitWaffe;
@@ -29,6 +30,8 @@ public class ArmdrehScript : MonoBehaviour {
         maxtorgue = affevalues.Maxtorgue;
         torguevalue = affevalues.torgueValue;
         impactAmount = affevalues.Impactamount;
+        mincol = 20;
+        
 	}
 	
 	// Update is called once per frame
@@ -363,6 +366,16 @@ public class ArmdrehScript : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+        if (collision.transform.tag == "Affe2" || collision.transform.tag == "Affe3" || collision.transform.tag == "Affe4" || collision.transform.tag == "Affe1")
+        {
+            
+            if (collision.relativeVelocity.magnitude > mincol)
+            {
+                Destroy(collision.gameObject);
+            }
+        }
+        /*
         if (tag == "p1")
         {
             if (tag == "Player")
@@ -370,17 +383,22 @@ public class ArmdrehScript : MonoBehaviour {
                 Debug.Log("Geilon");
                 return;
             }
-            if(collision.transform.tag == "Affe2" || collision.transform.tag == "Affe3" || collision.transform.tag == "Affe4")
+            if(collision.transform.tag == "Affe2" || collision.transform.tag == "Affe3" || collision.transform.tag == "Affe4" || collision.transform.tag=="Affe1")
             {
-                
-                Destroy(collision.gameObject);
+                if (collision.relativeVelocity.magnitude > mincol)
+                {
+                    Destroy(collision.gameObject);
+                }
             }
         }
         if (tag == "p2")
         {
             if (collision.transform.tag == "Affe1" || collision.transform.tag == "Affe3" || collision.transform.tag == "Affe4")
             {
-                Destroy(collision.gameObject);
+                if (collision.relativeVelocity.magnitude > mincol)
+                {
+                    Destroy(collision.gameObject);
+                }
             }
 
         }
@@ -388,17 +406,24 @@ public class ArmdrehScript : MonoBehaviour {
         {
             if (collision.transform.tag == "Affe1" || collision.transform.tag == "Affe2" || collision.transform.tag == "Affe4")
             {
-                Destroy(collision.gameObject);
+                if (collision.relativeVelocity.magnitude > mincol)
+                {
+                    Destroy(collision.gameObject);
+                }
             }
         }
         if (tag == "p4")
         {
             if (collision.transform.tag == "Affe1" || collision.transform.tag == "Affe2" || collision.transform.tag == "Affe3")
             {
-                Destroy(collision.gameObject);
+                if (collision.relativeVelocity.magnitude > mincol)
+                {
+                    Destroy(collision.gameObject);
+                }
             }
-
-        }
+            
+     
     }
-    
+    */
+    }
 }

@@ -5,7 +5,7 @@
             <value>Monkey</value>
         </property>
         <property name="outputFormat">
-            <value>0</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{6d73189a-41bb-4fa2-be86-39df6f4f7c78}</destination>
@@ -92,6 +92,9 @@
         <property name="length">
             <value>4</value>
         </property>
+        <relationship name="sounds">
+            <destination>{455e62a9-f4ac-4437-adc4-ff6d393398e8}</destination>
+        </relationship>
     </object>
     <object class="EventMixerGroup" id="{ead8bf4e-e0f5-4170-81cd-90f958cd50d0}">
         <property name="name">
@@ -114,6 +117,11 @@
     </object>
     <object class="MixerBusPanner" id="{b3750c1e-ed7b-4e0e-b359-8eb951cf567d}"/>
     <object class="MixerBusFader" id="{fe98933a-d4ee-4203-b004-12b5eb8cb6d8}"/>
+    <object class="SingleSound" id="{455e62a9-f4ac-4437-adc4-ff6d393398e8}">
+        <relationship name="audioFile">
+            <destination>{e3faf2d0-f319-42b7-bdc8-14b75936d926}</destination>
+        </relationship>
+    </object>
     <object class="MixerBusEffectChain" id="{f577cdcf-fe4b-4c92-beec-450e4ef0d647}">
         <relationship name="effects">
             <destination>{d4a7cc4b-9377-4c38-aed2-7d5be38458bc}</destination>
