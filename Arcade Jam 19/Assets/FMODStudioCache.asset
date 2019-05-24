@@ -38,6 +38,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 798
   Exists: 1
+--- !u!114 &-6996680985972543785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Lamin\Desktop\AGJ19\Arcade Jam 19\MonkeyJam\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636943203523228168
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1369920
+  Exists: 1
 --- !u!114 &-6432813215498939858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +94,7 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.bank
   m_EditorClassIdentifier: 
   Path: C:\Users\Lamin\Desktop\AGJ19\MonkeyJam\Build\Desktop\Master Bank.bank
-  lastModified: 636943157312732047
+  lastModified: 636943195481752852
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -103,6 +123,68 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &-4445551254185568856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Lamin\Desktop\AGJ19\Arcade Jam 19\MonkeyJam\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636943201265738712
+  LoadResult: 13
+  FileSizes:
+  - Name: Desktop
+    Value: 24032
+  Exists: 1
+--- !u!114 &-4438606792051547029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: MonkeyJam\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636943195481813041
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 846
+  Exists: 1
+--- !u!114 &-4010185797318101967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Monkey
+  m_EditorClassIdentifier: 
+  Path: event:/Monkey
+  guid: dd09cba38b8be145ac201d40221b2f07
+  Banks:
+  - {fileID: -6996680985972543785}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4000
 --- !u!114 &-3701011453475280993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +208,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 500
+--- !u!114 &-3092660715650599661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: MonkeyJam\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636943203523308312
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 846
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,19 +240,42 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 6050356093570062892}
-  - {fileID: -4999739421208977010}
+  - {fileID: -3092660715650599661}
+  - {fileID: -6996680985972543785}
   EditorEvents:
-  - {fileID: 900514985409377561}
-  - {fileID: -4887720867977361926}
-  - {fileID: 655583857185437815}
-  - {fileID: 7543185507252979395}
+  - {fileID: 3797345014774914181}
+  - {fileID: 4690110177528669}
+  - {fileID: 6099309657967773798}
+  - {fileID: -4010185797318101967}
   MasterBanks:
-  - {fileID: -4999739421208977010}
+  - {fileID: -6996680985972543785}
   StringsBanks:
-  - {fileID: 6050356093570062892}
-  stringsBankWriteTime: 636943157312831431
+  - {fileID: -3092660715650599661}
+  stringsBankWriteTime: 636943203523308312
   cacheVersion: 3
+--- !u!114 &4690110177528669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wok
+  m_EditorClassIdentifier: 
+  Path: event:/Wok
+  guid: 7e663000e53d7a43846312825e65abd7
+  Banks:
+  - {fileID: -6996680985972543785}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
 --- !u!114 &655583857185437815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +322,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 500
+--- !u!114 &3797345014774914181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  guid: 124aebd05a07b042974fae59a25b380c
+  Banks:
+  - {fileID: -6996680985972543785}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 65882
 --- !u!114 &3988660412534605455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,12 +469,35 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: C:\Users\Lamin\Desktop\AGJ19\MonkeyJam\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636943157312831431
+  lastModified: 636943195481813041
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 846
   Exists: 1
+--- !u!114 &6099309657967773798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ladle
+  m_EditorClassIdentifier: 
+  Path: event:/Ladle
+  guid: 94c0de6c82da6c4a8e8962c2a6b7d7ca
+  Banks:
+  - {fileID: -6996680985972543785}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &7543185507252979395
 MonoBehaviour:
   m_ObjectHideFlags: 0

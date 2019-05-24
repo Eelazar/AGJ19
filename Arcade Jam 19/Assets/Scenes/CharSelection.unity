@@ -867,7 +867,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Press
 
-    D
+    A
 
     To Join'
 --- !u!222 &657561341
@@ -950,7 +950,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Press
 
-    C
+    A
 
     To Join'
 --- !u!222 &850412896
@@ -2290,7 +2290,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Press
 
-    B
+    A
 
     To Join'
 --- !u!222 &1926832143
