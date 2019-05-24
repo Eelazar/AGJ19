@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/CharSelection.unity
+    guid: e850c87690f96e349bb034038cf11755
+  - enabled: 1
+    path: Assets/Scenes/GrassLevel.unity
+    guid: 849e073d717b1254b86839f3b357426d
+  - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

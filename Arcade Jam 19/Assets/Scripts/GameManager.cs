@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject playerPrefab;
+    public GameObject[] playerPrefabs;
     public Transform[] spawnPositions;
 
     private List<GameObject> players;
@@ -19,7 +19,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("CharSelection");
+        }
     }
 
     void CheckPlayerStatus()
@@ -44,33 +47,25 @@ public class GameManager : MonoBehaviour
     {
         if (Static.player1)
         {
-            GameObject p = GameObject.Instantiate<GameObject>(playerPrefab, spawnPositions[0].position, playerPrefab.transform.rotation);
-
-            //p.playerID = 1;
+            GameObject p = GameObject.Instantiate<GameObject>(playerPrefabs[0], spawnPositions[0].position, playerPrefabs[0].transform.rotation);
 
             players.Add(p);
         }
         if (Static.player2)
         {
-            GameObject p = GameObject.Instantiate<GameObject>(playerPrefab, spawnPositions[1].position, playerPrefab.transform.rotation);
-
-            //p.playerID = 2;
+            GameObject p = GameObject.Instantiate<GameObject>(playerPrefabs[1], spawnPositions[1].position, playerPrefabs[1].transform.rotation);
 
             players.Add(p);
         }
         if (Static.player3)
         {
-            GameObject p = GameObject.Instantiate<GameObject>(playerPrefab, spawnPositions[2].position, playerPrefab.transform.rotation);
-
-            //p.playerID = 3;
+            GameObject p = GameObject.Instantiate<GameObject>(playerPrefabs[2], spawnPositions[2].position, playerPrefabs[2].transform.rotation);
 
             players.Add(p);
         }
         if (Static.player4)
         {
-            GameObject p = GameObject.Instantiate<GameObject>(playerPrefab, spawnPositions[3].position, playerPrefab.transform.rotation);
-
-            //p.playerID = 4;
+            GameObject p = GameObject.Instantiate<GameObject>(playerPrefabs[3], spawnPositions[3].position, playerPrefabs[3].transform.rotation);
 
             players.Add(p);
         }
