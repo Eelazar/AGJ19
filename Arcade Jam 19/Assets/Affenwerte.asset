@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Affenwerte
   m_EditorClassIdentifier: Assembly-CSharp::Card
   Maxtorgue: 10
-  torgueValue: 2000
+  torgueValue: 200
   Impactamount: 50000

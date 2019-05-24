@@ -22,12 +22,12 @@ public class AffenScript : MonoBehaviour {
     }
     private void OnDestroy()
     {
-        Destroy(Fixpoints);
-        GameObject[] goa=GetComponentsInChildren<GameObject>();
+        Destroy(Fixpoints.gameObject);
+        Transform[] goa=GetComponentsInChildren<Transform>();
         for(int i = 0; i<goa.Length; i++)
         {
-            Destroy(goa[i]);
+            Destroy(goa[i].gameObject);
         }
-        Destroy(GetComponentInParent<GameObject>());
+        Destroy(GetComponentInParent<Transform>().gameObject);
     }
 }

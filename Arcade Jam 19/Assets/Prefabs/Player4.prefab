@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 8923947331305939365}
   m_Layer: 9
   m_Name: Affe1
-  m_TagString: Untagged
+  m_TagString: Affe4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1157,7 +1157,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 4.5683594, y: 0.15875483}
-  m_ConnectedAnchor: {x: 0.2183609, y: 0.15875483}
+  m_ConnectedAnchor: {x: 0.21835327, y: 0.15875459}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 1
